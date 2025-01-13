@@ -40,10 +40,7 @@ MineSim-3DVisualTool 的可视化场景`jiangtong_intersection_9_3_2`的示例
 
 <p align="center">
     <strong>Video: Example of the visualization scenario </strong>
-    <video style="display:block; width:100%; height:auto;" autoplay="autoplay" muted loop="loop" controls playsinline>
-        <source
-        src="https://raw.githubusercontent.com/byChenZhifa/archive/main/minesim/minesim-3d-visualizer-tool/minesim-3dvisualize-tool-scenario-demo-jiangtong_intersection_9_3_2_2024-09-27.mp4"
-        type="video/mp4" />
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/3CrWdiquBnw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </p>
 
 <p align="center">
