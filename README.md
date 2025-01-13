@@ -31,23 +31,38 @@ A 3D visualization tool for the MineSim project, developed based on ROS.
 
 ## :truck: Demo
 
-Usage example of MineSim-3DVisualTool
+- Usage Example of MineSim-3DVisualTool:
 
-<p align="center">
+<!-- <p align="center">
     <strong>Video: Usage example of MineSim-3DVisualTool</strong>
     <video style="display:block; width:100%; height:auto;" autoplay="autoplay" muted loop="loop" controls playsinline>
         <source
         src="https://raw.githubusercontent.com/byChenZhifa/archive/main/minesim/minesim-3d-visualizer-tool/minesim-3dvisualize-tool-using-method.mp4"
         type="video/mp4" />
-</p>
-
-**Example Image of the Scenario:**
-Example of the visualization scenario `jiangtong_intersection_9_3_2` for MineSim-3DVisualTool:
+</p> -->
 
 <p align="center">
-    <strong>Video: Example of the visualization scenario </strong>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/3CrWdiquBnw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <strong>Watch the video: Usage example of MineSim-3DVisualTool </strong>
 </p>
+
+[![Watch the video](https://img.youtube.com/vi/i7Rgs_xbxPo/0.jpg)](https://www.youtube.com/watch?v=i7Rgs_xbxPo)
+
+- Example Visualization of the Scenario:
+  visualization scenario `jiangtong_intersection_9_3_2` for MineSim-3DVisualTool:
+
+<!-- <p align="center">
+    <strong>Video: Example of the visualization scenario </strong>
+    <video style="display:block; width:100%; height:auto;" autoplay="autoplay" muted loop="loop" controls playsinline>
+        <source
+        src="https://raw.githubusercontent.com/byChenZhifa/archive/main/minesim/minesim-3d-visualizer-tool/minesim-3dvisualize-tool-scenario-demo-jiangtong_intersection_9_3_2_2024-09-27.mp4"
+        type="video/mp4" />
+</p> -->
+
+<p align="center">
+  <strong>Watch the video: Example of the visualization scenario </strong>
+</p>
+
+[![Watch the video](https://img.youtube.com/vi/3CrWdiquBnw/0.jpg)](https://www.youtube.com/watch?v=3CrWdiquBnw)
 
 <p align="center">
   <strong>Figure: scenario ID jiangtong_intersection_9_3_2</strong>
