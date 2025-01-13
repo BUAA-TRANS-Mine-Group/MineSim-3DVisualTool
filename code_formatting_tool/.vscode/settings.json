@@ -1,0 +1,69 @@
+{
+    // ---------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------
+    // --------------------------- Note ---------------------------
+    // 一份示例 settings.json，可满足大多数语言的规范化格式需求：---------------------------
+    // (1) 不在保存时自动格式化（全局 formatOnSave: false）。
+    // (2) 设置编辑器缩进大小为 4 空格。
+    // (3) Python 使用 Black 插件格式化，行宽 150。
+    // (4) C/C++ 使用 Clang-Format，行宽 150。
+    // (5) 其它常见语言（JS、TS、HTML、CSS、JSON等）使用 Prettier，不需要进行过多配置。
+    // ---------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------
+    // 注意:需要提前安装 VSCode 的插件:
+    // - black-formatter;
+    // - C/C++ (by Microsoft) 即 ms-vscode.cpptools;
+    // - Prettier - Code formatter (作者: esbenp);
+    // ---------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------
+    // ========== 全局设置 ==========
+    // 1) 不在保存时自动格式化
+    "editor.formatOnSave": false,
+    // 2) 设置缩进 4 个空格
+    "editor.tabSize": 4,
+    // ========== Python (Black) ==========
+    "python.formatting.provider": "black",
+    // 如果你使用的是 "black-formatter" 插件，则可能需要以下参数
+    "black-formatter.args": [
+        "--line-length",
+        "150"
+    ],
+    // ========== C / C++ (Clang-Format) ==========
+    // 当你打开 C/C++ 文件时，Clang-Format 会先在当前目录往上层目录逐级寻找 .clang-format 文件：
+    //  - 若找到 .clang-format 文件，则优先使用其中的配置。
+    //  - 若找不到，则使用下方 fallbackStyle 中定义的规则。
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, IndentWidth: 4, ColumnLimit: 150 }",
+    // 如果你想【始终】使用这份风格，即使项目中存在 .clang-format 文件，也可以显式声明：
+    // "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, IndentWidth: 4, ColumnLimit: 150 }",
+    //
+    // 注意：
+    // 1. .clang-format 文件是 Clang-Format 的“显式配置”，通常放在项目根目录，
+    //    用于团队统一代码风格，并在不同开发环境中保持一致。
+    // 2. fallbackStyle 只有在【项目里找不到 .clang-format 文件】时才会生效。
+    // ========== 其它语言 (Prettier) ==========
+    // 这里使用 "esbenp.prettier-vscode" 插件即可，不做其他额外配置
+    // JS
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // TS
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // HTML
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // CSS / SCSS
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // JSON
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

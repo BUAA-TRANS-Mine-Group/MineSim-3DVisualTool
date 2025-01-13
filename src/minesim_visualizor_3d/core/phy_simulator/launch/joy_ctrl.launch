@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="joy" name="joy_node" type="joy_node" output="screen">
+    <param name="dev" type="string" value="/dev/input/js0" />
+
+    <!-- 不使用游戏控制器，可以指定一个虚拟的设备或一个空的设备路径。 -->
+    <!-- joy_node 会尝试连接 /dev/null 设备，这个路径指向一个空设备，因此不会产生任何问题。 -->
+    <!-- <param name="dev" value="/dev/null" /> -->
+  </node>
+</launch>
