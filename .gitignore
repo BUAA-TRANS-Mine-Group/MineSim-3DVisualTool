@@ -1,32 +1,204 @@
-# Prerequisites
-*.d
+#############################################
+# 操作系统（OS）相关临时文件
+#############################################
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# macOS 产生的元数据文件
+.DS_Store                 # macOS 上常见的缓存文件
+.AppleDouble              # macOS 双流文件
+.LSOverride               # macOS Launch Services 缓存
 
-# Precompiled Headers
-*.gch
-*.pch
+# 防止 macOS Finder 在 USB、网络驱动器等生成的文件
+._*
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Windows 系统产生的文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Fortran module files
-*.mod
-*.smod
+# Linux 常见的临时文件
+*~
+.nfs*
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+#############################################
+# 常见编辑器 / IDE / 构建工具 相关文件
+#############################################
 
-# Executables
+# IntelliJ IDEA / Android Studio / PyCharm 等 JetBrains 系列
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+# !NOTE:忽略当前根目录 `/` 下的 .vscode/ 文件夹 及 文件夹下所有文件
+/.vscode/
+# !NOTE:不忽略当前根目录 `/` 下的 code_formatting_tool/.vscode/ 文件夹 及 文件夹下所有文件
+!code_formatting_tool/.vscode/
+
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.pdb
+*.opendb
+*.VC.db
+.vs/
+
+# CMake 相关文件
+CMakeCache.txt
+CMakeFiles/
+cmake-build-*/
+# Makefile
+# CMakeScripts/
+# Testing/
+# CTestTestfile.cmake
+# install_manifest.txt
+
+#############################################
+# Python 相关
+#############################################
+# !NOTE:忽略所有名为 __pycache__ 的目录，不管它在项目的哪一层。
+**/__pycache__/             # Python 编译缓存目录
+*.py[cod]                # Python 编译后的字节码文件，如 .pyc/.pyo/.pyd
+*$py.class               # 部分 Python 环境生成的类文件
+
+# 虚拟环境（venv 或 virtualenv 等）
+.venv/
+venv/
+env/
+
+#############################################
+# Node.js / JavaScript / TypeScript 相关
+#############################################
+
+node_modules/            # Node.js 依赖目录
+.npm/                    # npm 缓存文件
+yarn-error.log
+npm-debug.log
+yarn-debug.log
+yarn-lock.log
+pnpm-lock.yaml
+
+# !NOTE: 打包工具常见输出目录
+dist/
+build/
+tmp/
+out/
+
+#############################################
+# Java / Gradle / Maven 相关
+#############################################
+
+*.class                  # Java 编译输出类文件
+*.jar                    # 打包生成的 JAR 文件
+*.war                    # Web 应用包
+*.ear                    # Enterprise 应用包
+
+# Gradle
+.gradle/
+build/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+#############################################
+# C / C++ / C# 编译输出
+#############################################
+
+*.o                      # C / C++ 编译输出对象文件
+*.obj                    # Visual Studio 编译输出对象文件
+*.so                     # Linux/Unix 共享库文件
+*.dll                    # Windows 动态链接库
+*.exe                    # Windows 可执行文件
+*.out                    # Unix-like 可执行文件
+*.lib                    # 静态库（Windows）
+*.a                      # 静态库（Unix-like）
+*.pdb                    # 调试文件（Windows）
+
+# C# 常见目录
+bin/
+obj/
+
+#############################################
+# Go 相关
+#############################################
+
 *.exe
+*.test
 *.out
-*.app
+vendor/
+Gopkg.lock
+Gopkg.toml
+
+#############################################
+# Rust 相关
+#############################################
+
+/target/
+**/*.rs.bk
+
+#############################################
+# Logs / 临时文件
+#############################################
+
+*.log
+*.log.*
+.log/
+logs/
+*.swp
+*.swo
+*.tmp
+
+#############################################
+# 数据库 / 环境配置文件（如不需要版本管理可忽略）
+#############################################
+
+*.sqlite
+*.sqlite3
+*.db
+.env
+.env.*
+
+#############################################
+# Docker / 容器编排相关（若项目不需要可删除）
+#############################################
+
+Dockerfile~
+docker-compose.override.yml
+.env.docker
+.env.production
+
+#############################################
+# 其他可以考虑忽略的文件或目录（根据需要启用/删除）
+#############################################
+
+# 自定义脚本输出目录
+scripts_output/
+temp/
+# !NOTE:忽略所有名为 cache_figures 临时生成图片
+**/cache_figures/
+# !NOTE:忽略 ros 编译文件： devel/ build/
+devel/
+**/minesim_run_log_copy/
+# 如果你的项目不需要忽略根目录下的某些特定文件，可用 “!” 进行否定
+# !special_config.cfg
+
+# 结尾
+#############################################
+# 根据实际需要进行增删改
+# 如果已经被 Git 跟踪的文件需要忽略，请先执行：
+#   git rm --cached <文件/目录> -r
+# 再提交并推送
+#############################################
