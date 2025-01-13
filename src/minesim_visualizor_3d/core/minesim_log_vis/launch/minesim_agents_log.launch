@@ -1,0 +1,29 @@
+<launch>
+        <!-- ###是否记录数据 -->
+        <arg name="record_track" default="false" />
+        <arg name="high_definition_map" value="minesim_high_definition_map" />
+
+        <!-- ###GPS路径点文件转odom格式发布节点 -->
+        <!-- 此处用于加载 回放MineSim 仿真日志 -->
+        <node pkg="minesim_log_vis" type="gps2sim" name="gps2sim_PathAndVehicle" output="screen">
+                <param name="frame_id" type="string" value="map" />
+                <!-- 江西， 江铜矿区地图 -->
+                <param name="map_file" type="string"
+                        value="$(find playgrounds))/$(arg high_definition_map)/jiangxi_jiangtong_semantic_map.json" />
+                <!-- 广东， 大排矿区地图 -->
+                <!-- <param name="map_file" type="string"
+                        value="$(find playgrounds))/$(arg high_definition_map)/guangdong_dapai_semantic_map.json" /> -->
+
+
+                <!-- 日志文件1： 回放MineSim 在1个场景模拟过程的仿真日志 -->
+                <param name="track_file" type="string"
+                        value="$(find playgrounds)/minesim_run_log/jiangtong_intersection_9_3_2_2024-09-27T00:38:47.260912.idm.json" />
+                <!-- 日志文件2：  全局路径规划搜索的 global route path -->
+                <param name="link_path_file" type="string"
+                        value="$(find playgrounds)/minesim_run_log/jiangtong_intersection_9_3_2_single_msg_2024-09-27T00:38:47.260912.idm.json" />
+                <param name="config_file" type="string"
+                        value="$(find playgrounds)/configuration/config.json" />
+
+        </node>
+
+</launch>

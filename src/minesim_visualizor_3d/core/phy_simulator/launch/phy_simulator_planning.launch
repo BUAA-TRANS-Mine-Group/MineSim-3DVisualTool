@@ -1,0 +1,29 @@
+<launch>
+  <arg name="arena_info_static_topic" value="/arena_info_static" />
+  <arg name="arena_info_dynamic_topic" value="/arena_info_dynamic" />
+
+  <!-- 不使用游戏控制器 -->
+  <!-- <include file="$(find phy_simulator)/launch/joy_ctrl.launch" /> -->
+
+  <arg name="high_definition_map" value="minesim_high_definition_map" />
+
+  <node pkg="phy_simulator" name="phy_simulator_planning_node" type="phy_simulator_planning_node"
+    output="screen">
+    <param name="vehicle_info_path" type="string"
+      value="$(find playgrounds)/$(arg high_definition_map)/vehicle_set.json" />
+    <!-- 江西， 江铜矿区地图 -->
+    <param name="map_path" type="string"
+      value="$(find playgrounds)/$(arg high_definition_map)/jiangxi_jiangtong_semantic_map.json" />
+    <param name="lane_net_path" type="string"
+      value="$(find playgrounds)/$(arg high_definition_map)/jiangxi_jiangtong_semantic_map.json" />
+    <!-- 广东， 大排矿区地图 -->
+    <!-- <param name="map_path" type="string"
+      value="$(find playgrounds)/$(arg high_definition_map)/guangdong_dapai_semantic_map.json" />
+    <param name="lane_net_path" type="string"
+      value="$(find playgrounds)/$(arg high_definition_map)/guangdong_dapai_semantic_map.json" />
+    <remap from="~arena_info_static" to="$(arg arena_info_static_topic)" /> -->
+    <remap from="~arena_info_dynamic" to="$(arg arena_info_dynamic_topic)" />
+    <param name="config_file" type="string"
+      value="$(find playgrounds)/configuration/config.json" />
+  </node>
+</launch>
